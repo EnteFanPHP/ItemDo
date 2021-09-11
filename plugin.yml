@@ -1,0 +1,8 @@
+---
+name: ItemDo
+version: 1.0
+main: EnteFan\ItemDo
+api: 3.22.4
+
+author: EnteFan
+...
