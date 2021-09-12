@@ -2,6 +2,7 @@
 
 namespace EnteFan\constructor;
 
+use EnteFan\events\custom\ItemCreationEvent;
 use pocketmine\item\Item;
 use pocketmine\Player;
 use pocketmine\nbt\tag\StringTag;
@@ -31,6 +32,9 @@ class ItemConstructor{
     $this->permission = $permisson;
     
     $this->build();
+    
+    $event = new ItemCreationEvent($player, $item);
+    $event->call();
   }
   
   public function build(){
